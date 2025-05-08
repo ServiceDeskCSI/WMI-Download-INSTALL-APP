@@ -4,7 +4,7 @@
 [string]$RemoteHost      = "TARGET-PC"                                    # remote host name or IP
 [string]$DownloadUrl     = "https://site.com\file.msi"
 [string]$FileName      = "file.msi"
-[string]$Args  = "/qn /silent"
+[string]$InstallerArgs      = "/qn /silent"
 [string]$RemoteTempPath  = "C:\Temp"
 
 # -------------------------------------------------------------------
@@ -38,7 +38,7 @@ if ($doDownload.ReturnValue -ne 0) {
 # 3) Build and launch the installer
 # -------------------------------------------------------------------
 
-$installCmd = "cmd.exe /c `"$remoteExePath`" $Args
+$installCmd = "cmd.exe /c `"$remoteExePath`" $InstallerArgs
 
 $doInstall = $procClass.Create($installCmd)
 if ($doInstall.ReturnValue -eq 0) {
