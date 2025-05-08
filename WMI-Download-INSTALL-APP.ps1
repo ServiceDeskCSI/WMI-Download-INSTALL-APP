@@ -4,7 +4,7 @@
 [string]$RemoteHost      = "TARGET-PC"                                    # remote host name or IP
 [string]$DownloadUrl     = "https://site.com\file.msi"
 [string]$FileName      = "file.msi"
-$Args  = "/qn /silent"
+[string]$Args  = "/qn /silent"
 [string]$RemoteTempPath  = "C:\Temp"
 
 # -------------------------------------------------------------------
