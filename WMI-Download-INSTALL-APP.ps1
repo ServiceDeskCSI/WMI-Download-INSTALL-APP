@@ -2,9 +2,9 @@
 # Configuration (edit these)
 # ============================
 [string]$RemoteHost      = "TARGET-PC"                                    # remote host name or IP
-[string]$DownloadUrl     = "https://site.com\file.msi"
-[string]$FileName      = "file.msi"
-[string]$InstallerArgs      = "/qn /silent"
+[string]$DownloadUrl     = "https://site.com/file.exe"
+[string]$FileName      = "file.exe"
+[string]$InstallerArgs      = "/S"
 [string]$RemoteTempPath  = "C:\Temp"
 
 # -------------------------------------------------------------------
