@@ -24,7 +24,7 @@ if ($createDirs.ReturnValue -ne 0) {
 # -------------------------------------------------------------------
 # 2) Download installer via PowerShell on the remote machine
 # -------------------------------------------------------------------
-$remoteExePath = "$RemoteTempPath\WindowsAgentSetup.exe"
+$remoteExePath = "$RemoteTempPath\$FileName"
 $downloadCmd = "cmd.exe /c powershell -NoProfile -ExecutionPolicy Bypass -Command `"Invoke-WebRequest -Uri '$DownloadUrl' -OutFile '$remoteExePath'`""
 
 $doDownload = $procClass.Create($downloadCmd)
